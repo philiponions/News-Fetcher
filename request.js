@@ -1,5 +1,6 @@
 const searchForm = document.querySelector('.search')
 const topButton = document.querySelector('button[type=tophead]')
+const instructionsHeader = document.querySelector('.instructions')
 const cardNews = document.getElementById("card-news")
 const input = document.querySelector('.input')
 const newsList = document.querySelector('.news-list')
@@ -22,12 +23,15 @@ function retrieveSearch (e){
 
     let topic = input.value;
     let url = `https://newsapi.org/v2/everything?q=${topic}&apiKey=${apiKey}`
-    fetchURL(url)
+
+    if (topic)
+        fetchURL(url)
 
 }
 
 function fetchURL(url) {
     cardNews.style.display = "block"
+    instructionsHeader.style.display = "none"
 
     fetch(url).then((res => {
         return res.json()

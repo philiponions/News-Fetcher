@@ -5,9 +5,6 @@
     box-sizing: border-box;
     list-style: none;
 }
-body {
-    background-color: #4CAF50;
-}
 
 
 h1 {
@@ -16,6 +13,11 @@ h1 {
 
 .input {
     text-align: left;
+}
+
+.instructions {
+    margin-top: 40px;
+    color: #797979;
 }
 
 #card-header {
@@ -38,7 +40,7 @@ h1 {
     background: url('/images/collectionnews.jpeg') no-repeat 0 -200px;
     background-size: 100%;
     padding-bottom: 100px;
-    border-bottom: #211da6 3px solid;
+    border-bottom: #797979 3px solid;
 }
 
 img{
@@ -80,7 +82,7 @@ li {
 }
 
 input[type=text] {
-    width: 500px;
+    width: 400px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -113,6 +115,8 @@ button[type=tophead] {
     font-size: 16px;
 }
 
+
 .search {
     margin-top: 50px;
+    margin-bottom: 25px;
 }
