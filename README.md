@@ -9,3 +9,6 @@ In terms of the API itself, I used News API which provides json files of news ar
 After making an app for a school project, I fell in love with it and wanted to explore other areas of software development. I chose web development because its the most
 popular and documented form of development. There are many different ways to develop a website, and I decided to start with the absolute fundementals, HTML CSS and Javascript.
 I did not use any frameworks whatsoever. This project was a great start in getting into web development.
+
+## Instructions
+I tried deploying it on firebase, but the API does not accept requests on the browser and can only be done on a localhost. So in order to run the app, you must run it locally. Open index.html with liveserver.
