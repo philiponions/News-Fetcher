@@ -1,0 +1,118 @@
+* {
+    margin: auto;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body {
+    background-color: #4CAF50;
+}
+
+
+h1 {
+    padding-top: 100px;
+}
+
+.input {
+    text-align: left;
+}
+
+#card-header {
+    padding: 10x 50px 75px 100px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #58585896;
+    width: 50%;
+
+    justify-content: center;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    max-width: 100%;
+    background: url('/images/collectionnews.jpeg') no-repeat 0 -200px;
+    background-size: 100%;
+    padding-bottom: 100px;
+    border-bottom: #211da6 3px solid;
+}
+
+img{
+    margin-right: 50px;
+    height: 80px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+
+#card-news{
+    display: none;
+    background-color: rgb(242, 242, 242);
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.news-list {
+
+    margin-top: 50px;
+    padding-left: 0px;
+}
+.date {
+    color: rgb(115, 115, 115);
+    text-align: left;
+    padding-top: 10px;
+}
+a:link { text-decoration: none; }
+
+a {
+    text-decoration: none;
+    text-align: left;
+}
+
+li {
+    margin-left: 100px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+input[type=text] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+input[type=submit] {
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button[type=tophead] {
+    background-color: #d54e4e; /* Red */
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.search {
+    margin-top: 50px;
+}
