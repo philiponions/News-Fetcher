@@ -4,15 +4,15 @@ const instructionsHeader = document.querySelector('.instructions')
 const cardNews = document.getElementById("card-news")
 const input = document.querySelector('.input')
 const newsList = document.querySelector('.news-list')
-const apiKey = 'd95758a11003496b9f9b351754ef5dce'
+const apiKey = 'eglaeP5IKXNStOE4lDJhNfGaD9eAnG'
 
 topButton.addEventListener("click",retrieveToplines)
 searchForm.addEventListener('submit', retrieveSearch)
 
 function retrieveToplines(e) {
     e.preventDefault()
-
-    let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=d95758a11003496b9f9b351754ef5dce`
+    let url = `https://gnews.io/api/v4/top-headlines?token=df08cd7b50114542295706dbc5bf3b83
+    `
     fetchURL(url)
 }
 
@@ -22,8 +22,7 @@ function retrieveSearch (e){
     e.preventDefault()
 
     let topic = input.value;
-    let url = `https://newsapi.org/v2/everything?q=${topic}&apiKey=${apiKey}`
-
+    let url = `https://newsapi.in/newsapi/news.php?key=${apiKey}&category=${topic}`
     if (topic)
         fetchURL(url)
 
@@ -51,7 +50,7 @@ function fetchURL(url) {
 
             p.textContent = formatDate(newsDate)
             a.textContent = article.title
-            image.src = article.urlToImage
+            image.src = article.image
             
             li.appendChild(image)
             li.appendChild(a)
