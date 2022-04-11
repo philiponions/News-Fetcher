@@ -4,16 +4,17 @@ const instructionsHeader = document.querySelector('.instructions')
 const cardNews = document.getElementById("card-news")
 const input = document.querySelector('.input')
 const newsList = document.querySelector('.news-list')
-const apiKey = 'eglaeP5IKXNStOE4lDJhNfGaD9eAnG'
+const apiKey = 'df08cd7b50114542295706dbc5bf3b83'
 
 topButton.addEventListener("click",retrieveToplines)
 searchForm.addEventListener('submit', retrieveSearch)
 
 function retrieveToplines(e) {
+    newsList.innerHTML = ''
     e.preventDefault()
-    let url = `https://gnews.io/api/v4/top-headlines?token=df08cd7b50114542295706dbc5bf3b83
-    `
+    let url = `https://gnews.io/api/v4/top-headlines?token=${apiKey}&country=ca`
     fetchURL(url)
+    console.log("Retrieving top head lines")
 }
 
 function retrieveSearch (e){
@@ -22,7 +23,8 @@ function retrieveSearch (e){
     e.preventDefault()
 
     let topic = input.value;
-    let url = `https://newsapi.in/newsapi/news.php?key=${apiKey}&category=${topic}`
+    let url = `https://gnews.io/api/v4/search?q=${topic}&token=${apiKey}&country=ca`
+    // let url = `https://newsapi.in/newsapi/news.php?key=${apiKey}&category=${topic}`
     if (topic)
         fetchURL(url)
 
@@ -35,9 +37,12 @@ function fetchURL(url) {
     fetch(url).then((res => {
         return res.json()
     })).then((data)=> {
+        titles = []
         data.articles.forEach(article => {
+            // if (li.filter(article.title => ))
 
-            console.log(data)
+            console.log("titles so far:")
+            console.log(titles)
             let image = document.createElement('img')
             let li = document.createElement('li')
             let a = document.createElement('a')
@@ -47,9 +52,15 @@ function fetchURL(url) {
             p.className = "date"
 
             let newsDate = article.publishedAt        
-
+            console.log(newsDate)
             p.textContent = formatDate(newsDate)
             a.textContent = article.title
+
+            if (titles.includes(article.title))
+                return
+            
+            titles.push(article.title)
+
             image.src = article.image
             
             li.appendChild(image)

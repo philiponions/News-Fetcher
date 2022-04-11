@@ -37,7 +37,7 @@ h1 {
     text-align: center;
     color: rgb(255, 255, 255);
     max-width: 100%;
-    background: url('/public/images/collectionnews.jpeg') no-repeat 0 -200px;
+    background: url('/images/collectionnews.jpeg') no-repeat 0 -200px;
     background-size: 100%;
     padding-bottom: 100px;
     border-bottom: #797979 3px solid;
@@ -64,21 +64,24 @@ img{
     padding-left: 0px;
 }
 .date {
+    margin-left: auto;
     color: rgb(115, 115, 115);
-    text-align: left;
-    padding-top: 10px;
+    text-align: right;
 }
 a:link { text-decoration: none; }
 
 a {
     text-decoration: none;
     text-align: left;
+    
 }
 
 li {
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 10px;
-    text-align: left;
+    margin-right: 50px;
+    text-align: center;
+    display: flex;
 }
 
 input[type=text] {
@@ -119,4 +122,81 @@ button[type=tophead] {
 .search {
     margin-top: 50px;
     margin-bottom: 25px;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+@media(max-width: 768px) {
+    img{
+        margin-right: 15px;
+    }
+    
+    .container2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        max-width: 100%;
+        background: url('/public/images/collectionnews.jpeg') no-repeat;
+        background-size: 200% 100%;
+        border-bottom: #797979 3px solid;
+    }
+    #card-header {
+    margin-top: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #58585896;
+    width: 100%;
+    justify-content: center;
+
+    
+    }
+    input[type=text] {
+        width: 200px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+    button[type=tophead] {
+        background-color: #d54e4e; /* Red */
+        border: none;
+        color: white;
+        padding: 12px 32px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+
+    padding: 12px px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+    }
+    li {
+        margin-left: 10px;
+        margin-right: 10px ;
+        margin-top: 10px;
+        text-align: left;
+    }
+    .date {
+        
+        color: rgb(115, 115, 115);
+        text-align: right;
+    }
+
 }
